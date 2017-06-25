@@ -1,1 +1,1 @@
-{"version":3,"file":"index.css","sources":["webpack:///./test.css"],"sourcesContent":["body {\n  background: green\n}\n\n\n\n// WEBPACK FOOTER //\n// ./test.css"],"mappings":"AAAA","sourceRoot":""}
+{"version":3,"file":"index.css","sources":["webpack:///./page.css"],"sourcesContent":["/* Global page styles */\nbody {\n  background: #EEE;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./page.css"],"mappings":"AACA","sourceRoot":""}

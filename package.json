@@ -11,6 +11,7 @@
     "@rill/helmet": "^1.1.0",
     "@rill/logger": "^2.1.1",
     "@rill/polyfill": "^1.1.4",
+    "@rill/progress": "^2.0.3",
     "@rill/react": "^3.1.1",
     "@rill/static": "^2.0.0",
     "auto-sni": "^2.2.1",

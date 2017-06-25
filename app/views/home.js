@@ -1,14 +1,10 @@
-import './test.css'
-
+import logoImg from '../assets/logo.jpg'
 export default async ({ res, locals }) => {
-  locals.title = 'hi7'
+  locals.title = 'Home Page'
   res.body = (
     <div>
-      Part 1
-      {Array.from(Array(50)).map((_, i) => <br key={i} />)}
-      Part 2
-      {Array.from(Array(50)).map((_, i) => <br key={i} />)}
-      Part 3
+      <img src={logoImg} />
+      <a href='/other'>Go to the other page</a>
     </div>
   )
 }

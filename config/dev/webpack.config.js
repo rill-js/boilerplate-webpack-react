@@ -64,6 +64,7 @@ const createConfig = opts => Object.assign(opts, {
       test: file => !/\.(js(x|on)?|css)$/.test(file),
       loader: 'file-loader',
       options: {
+        publicPath: '/',
         name: '[hash:base64:10].[ext]',
         emitFile: opts.name === 'Browser'
       }
