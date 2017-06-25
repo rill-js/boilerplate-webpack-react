@@ -1,0 +1,53 @@
+{
+  "name": "@rill/boilerplate-webpack-react",
+  "description": "An isomorphic boilerplate using react, webpack and rill.",
+  "version": "0.0.1",
+  "author": "Dylan Piercey <pierceydylan@gmail.com>",
+  "dependencies": {
+    "@rill/compress": "^1.0.4",
+    "@rill/etag": "^1.1.1",
+    "@rill/expose": "^1.0.0",
+    "@rill/fresh": "^1.0.0",
+    "@rill/helmet": "^1.1.0",
+    "@rill/logger": "^2.1.1",
+    "@rill/polyfill": "^1.1.4",
+    "@rill/react": "^3.1.1",
+    "@rill/static": "^2.0.0",
+    "auto-sni": "^2.2.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "rill": "^5.0.3",
+    "source-map-support": "^0.4.15"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-react-require": "^3.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.1",
+    "compression-webpack-plugin": "^0.4.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "imagemin-webpack-plugin": "^1.4.4",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "pretty-error": "^2.1.0",
+    "spawn-server-webpack-plugin": "^1.7.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "bould/index.js",
+  "scripts": {
+    "build": "webpack --progress --config ./config/prod/webpack.config.js",
+    "start": "node ./server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node ./config/dev/dev-server.js"
+  }
+}
