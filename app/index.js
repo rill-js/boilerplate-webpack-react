@@ -1,3 +1,4 @@
+import ms from 'ms'
 import rill from 'rill'
 import helmet from '@rill/helmet'
 import fresh from '@rill/fresh'
@@ -18,7 +19,7 @@ export default rill()
   .use(etag())
   .use(compress())
   .get('/polyfill.js', polyfill())
-  .get(serve('build/public', { gzip: true, cache: '30 days' }))
+  .get(serve('build/public', { gzip: true, cache: `${ms('30 days')}; immutable` }))
   .use(progress({ spinner: false, color: '#009fe2' }))
   .use(logger())
   .use(expose())

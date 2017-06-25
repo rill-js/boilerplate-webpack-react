@@ -2,6 +2,8 @@
 // You may not even need this if you have proxying setup (just run build/index.js directly).
 // Please update as neccesary.
 
+const ms = require('ms')
+
 global.SECURITY = {
   noSniff: true,
   ieNoOpen: true,
@@ -11,11 +13,11 @@ global.SECURITY = {
   referrerPolicy: true,
   dnsPrefetchControl: true,
   hpkp: {
-    maxAge: 7.776e+9, // 90 days
+    maxAge: ms('90 days'),
     sha256s: ['AbCdEf123=', 'ZyXwVu456='] // CHANGE ME
   },
   hsts: {
-    maxAge: 7.776e+9, // 90 days
+    maxAge: ms('90 days'),
     includeSubdomains: true,
     force: true
   },
