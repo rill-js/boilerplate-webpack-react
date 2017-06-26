@@ -10,6 +10,7 @@ import progress from '@rill/progress'
 import logger from '@rill/logger'
 import expose from '@rill/expose'
 import react from '@rill/react'
+import body from '@rill/body'
 import apiCtrls from '../api'
 import appCtrls from './controllers'
 import wrappers from './wrappers'
@@ -26,6 +27,7 @@ export default router()
   .use(logger())
   .use(expose())
   .use(react())
+  .use(body())
   .at('/api/*', !process.browser && apiCtrls)
   .at('/app/*', appCtrls)
   .get(wrappers)
