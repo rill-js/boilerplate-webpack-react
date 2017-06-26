@@ -87,7 +87,7 @@ module.exports = exports = [
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': 'production',
+        'process.env.NODE_ENV': undefined,
         'process.browser': undefined
       }),
       new webpack.BannerPlugin({ banner: 'require("source-map-support").install({ hookRequire: true })', raw: true }),
