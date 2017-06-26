@@ -3,6 +3,9 @@
   "description": "An isomorphic boilerplate using react, webpack and rill.",
   "version": "0.0.1",
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
+  "browser": {
+    "./api/index.js": false
+  },
   "dependencies": {
     "@rill/compress": "^1.0.4",
     "@rill/etag": "^1.1.1",
@@ -48,8 +51,8 @@
   "license": "MIT",
   "main": "bould/index.js",
   "scripts": {
-    "precommit": "npm run build && git add ./build --all",
     "build": "webpack --progress --config ./config/prod/webpack.config.js",
+    "precommit": "npm run build && git add ./build --all",
     "start": "node ./server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node ./config/dev/dev-server.js"

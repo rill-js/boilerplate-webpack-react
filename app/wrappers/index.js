@@ -1,7 +1,8 @@
+import router from 'rill'
 import { wrap } from '@rill/react'
 import pageWrapper from './page'
 
-export default app => app
+export default router()
   .get('/*', wrap(pageWrapper, ({ res }) => {
     // Preload required files.
     res.append('Link', '</polyfill.js>; rel=preload; as=script;')

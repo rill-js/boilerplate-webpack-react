@@ -1,5 +1,5 @@
 import ms from 'ms'
-import rill from 'rill'
+import router from 'rill'
 import helmet from '@rill/helmet'
 import fresh from '@rill/fresh'
 import etag from '@rill/etag'
@@ -10,10 +10,12 @@ import progress from '@rill/progress'
 import logger from '@rill/logger'
 import expose from '@rill/expose'
 import react from '@rill/react'
+import apiCtrls from '../api'
+import appCtrls from './controllers'
 import wrappers from './wrappers'
 import views from './views'
 
-export default rill()
+export default router()
   .use(helmet(global.SECURITY))
   .use(fresh())
   .use(etag())
@@ -24,6 +26,8 @@ export default rill()
   .use(logger())
   .use(expose())
   .use(react())
-  .setup(wrappers)
-  .setup(views)
+  .at('/api/*', !process.browser && apiCtrls)
+  .at('/app/*', appCtrls)
+  .get(wrappers)
+  .get(views)
   .listen({ port: 8081 })
