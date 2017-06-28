@@ -1,10 +1,13 @@
 require('./pretty-errors')
 const webpack = require('webpack')
+const FriendlyErrorPlugin = require('friendly-errors-webpack-plugin')
 const DevServer = require('webpack-dev-server')
 const configs = require('./webpack.config')
 const spawnedServer = configs.spawnedServer
-
-new DevServer(webpack(configs), {
+const compiler = webpack(configs)
+compiler.apply(new FriendlyErrorPlugin())
+new DevServer(compiler, {
+  quiet: true,
   inline: true,
   overlay: true,
   contentBase: false,
