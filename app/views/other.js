@@ -1,3 +1,4 @@
+import React from 'react'
 import Ticker from '../partials/ticker'
 
 export default async ({ res, locals }) => {

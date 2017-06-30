@@ -22,15 +22,18 @@ const createConfig = opts => Object.assign(opts, {
   devtool: 'cheap-module-inline-source-map',
   module: {
     rules: [{
-      test: /\.js$/,
+      enforce: 'pre',
+      test: /\.jsx?$/,
+      loader: 'eslint-loader',
+      exclude: /node_modules/,
+      options: { fix: true }
+    }, {
+      test: /\.jsx?$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
       options: {
         babelrc: false,
-        plugins: [
-          'babel-plugin-transform-runtime',
-          'babel-plugin-react-require'
-        ],
+        plugins: ['babel-plugin-transform-runtime'],
         presets: [
           ['babel-preset-env', {
             useBuiltIns: true,

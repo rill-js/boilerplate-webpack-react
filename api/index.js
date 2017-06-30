@@ -2,5 +2,4 @@
 import router from 'rill'
 import controllers from './controllers'
 
-export default router()
-  .use(controllers)
+export default router().use(controllers)

@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 
 export default class Ticker extends Component {
   componentDidMount () {
@@ -14,6 +14,10 @@ export default class Ticker extends Component {
   render () {
     const { state } = this
     if (!state) return <div>Loading...</div>
-    return <div>{this.state.time.toLocaleString()}</div>
+    return (
+      <div>
+        {this.state.time.toLocaleString()}
+      </div>
+    )
   }
 }

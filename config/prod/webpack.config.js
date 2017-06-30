@@ -23,10 +23,7 @@ const createConfig = opts => Object.assign(opts, {
       exclude: /node_modules/,
       options: {
         babelrc: false,
-        plugins: [
-          'babel-plugin-transform-runtime',
-          'babel-plugin-react-require'
-        ],
+        plugins: ['babel-plugin-transform-runtime'],
         presets: [
           ['babel-preset-env', {
             useBuiltIns: true,
