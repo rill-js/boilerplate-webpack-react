@@ -23,7 +23,7 @@
     "ms": "^2.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "rill": "^5.0.3",
+    "rill": "^5.0.6",
     "source-map-support": "^0.4.15"
   },
   "devDependencies": {
