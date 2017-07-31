@@ -15,6 +15,8 @@ import apiCtrls from '../api'
 import appCtrls from './controllers'
 import wrappers from './wrappers'
 import views from './views'
+const message = 'App Started'
+console.time(message)
 
 export default router()
   .use(helmet(global.SECURITY))
@@ -34,4 +36,7 @@ export default router()
   .at('/app/*', appCtrls)
   .get(wrappers)
   .get(views)
-  .listen({ port: 8081 })
+  .listen(() => {
+    console.timeEnd(message)
+    console.log('')
+  })
