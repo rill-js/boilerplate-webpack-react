@@ -23,7 +23,7 @@
     "ms": "^2.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "rill": "^5.0.12",
+    "rill": "^5.0.14",
     "source-map-support": "^0.4.15"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "pretty-error": "^2.1.0",
-    "spawn-server-webpack-plugin": "^2.0.1",
+    "spawn-server-webpack-plugin": "^2.0.3",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
