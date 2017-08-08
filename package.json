@@ -44,7 +44,7 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "pretty-error": "^2.1.0",
-    "spawn-server-webpack-plugin": "^2.0.3",
+    "spawn-server-webpack-plugin": "^2.0.5",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
