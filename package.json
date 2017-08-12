@@ -7,13 +7,13 @@
     "./api/index.js": false
   },
   "dependencies": {
-    "@rill/body": "^1.2.2",
-    "@rill/compress": "^1.0.4",
+    "@rill/body": "^1.2.3",
+    "@rill/compress": "^1.0.5",
     "@rill/etag": "^1.1.1",
     "@rill/expose": "^1.0.0",
-    "@rill/fresh": "^1.0.0",
+    "@rill/fresh": "^1.0.1",
     "@rill/helmet": "^1.2.0",
-    "@rill/logger": "^2.1.1",
+    "@rill/logger": "^2.1.2",
     "@rill/polyfill": "^1.1.5",
     "@rill/progress": "^2.0.4",
     "@rill/react": "^4.0.1",
@@ -39,21 +39,22 @@
     "file-loader": "^0.11.2",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "husky": "^0.14.3",
+    "ignore-emit-webpack-plugin": "^0.2.1",
     "imagemin-webpack-plugin": "^1.4.4",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "pretty-error": "^2.1.0",
     "spawn-server-webpack-plugin": "^2.0.5",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1"
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1"
   },
   "keywords": [],
   "license": "MIT",
   "main": "bould/index.js",
   "scripts": {
     "build": "webpack --progress --config ./config/prod/webpack.config.js",
-    "precommit": "npm run build && git add ./build --all",
+    "precommit": "rm -rf ./build && npm run build && git add ./build --all",
     "start": "node ./server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node ./config/dev/dev-server.js"
