@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const ExtractCSSPlugin = require('extract-text-webpack-plugin')
 const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin')
 const MinifyJSPlugin = require('babili-webpack-plugin')
+const MinifyCSSPlugin = require('csso-webpack-plugin').default
 const MinifyImgPlugin = require('imagemin-webpack-plugin').default
 const CompressionPlugin = require('compression-webpack-plugin')
 
@@ -44,7 +45,6 @@ const createConfig = opts => Object.assign(opts, {
         loader: 'css-loader',
         options: {
           modules: false,
-          minimize: true,
           sourceMap: true,
           importLoaders: 1
         }
@@ -109,8 +109,9 @@ module.exports = [
         'process.browser': true
       }),
       new ExtractCSSPlugin({ filename: 'index.css', allChunks: true }),
-      new MinifyImgPlugin(),
       new MinifyJSPlugin(),
+      new MinifyCSSPlugin({ sourceMap: true }),
+      new MinifyImgPlugin(),
       new CompressionPlugin()
     ]
   })
